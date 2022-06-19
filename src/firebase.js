@@ -17,6 +17,7 @@ const db = firebaseApp.firestore()
 const usersCollection = db.collection('users')
 
 export const createUser = user => {
+  user.createdAt = firebase.firestore.FieldValue.serverTimestamp() 
   return usersCollection.add(user)
 }
 

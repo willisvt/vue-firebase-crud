@@ -2,8 +2,9 @@
   <div class="card card-body mt-4">
     <form @submit.prevent="onSubmit">
       <div class="form-group">
+          <textarea type="text" v-model="form.name" rows="5" cols="33"></textarea><td></td><br><br>
         <label>Name</label>
-        <input v-model="form.name" class="form-control" required />
+        <!-- <input v-model="form.name" class="form-control" required /> -->
       </div>
 
       <!-- <div class="form-group mt-3">
@@ -14,10 +15,11 @@
           type="email"
         />
       </div> -->
+      <button @click="input = form.name " type="submit">Submit/Create</button>
 
-      <button type="submit" class="btn btn-success mt-3">
+      <!-- <button type="submit" class="btn btn-success mt-3">
         Create User
-      </button>
+      </button> -->
     </form>
   </div>
 </template>
@@ -33,7 +35,7 @@ export default {
     const onSubmit = async () => {
       await createUser({ ...form })
       form.name = ''
-      form.email = ''
+      // form.email = ''
     }
 
     return { form, onSubmit }
