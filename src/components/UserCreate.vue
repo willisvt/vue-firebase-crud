@@ -6,15 +6,14 @@
         <input v-model="form.name" class="form-control" required />
       </div>
 
-      <div class="form-group mt-3">
+      <!-- <div class="form-group mt-3">
         <label>Email</label>
         <input
           v-model="form.email"
           class="form-control"
           type="email"
-          required
         />
-      </div>
+      </div> -->
 
       <button type="submit" class="btn btn-success mt-3">
         Create User

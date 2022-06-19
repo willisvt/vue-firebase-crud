@@ -1,8 +1,7 @@
 <template>
   <div>
-    <tr v-for="{ id, name, email } in users" :key="id">
+    <tr v-for="{ id, name } in users" :key="id">
       <td>{{ name }}</td>
-      <td>{{ email }}</td>
       {{ name }}<button @click="input = name ">Submit</button>
     </tr>
           <!-- -----------
